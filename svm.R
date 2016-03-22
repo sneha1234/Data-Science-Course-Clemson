@@ -11,8 +11,9 @@ rm(list = ls())
 library(ISLR)
 library(e1071)
 attach(Auto)
-med<- median(mpg)
-bin.var<-ifelse(mpg>med, 1, 0)
+med = median(mpg)
+new.var = ifelse(mpg > med, 1, 0)
+Auto$mpglevel = as.factor(new.var)
 
 #(b) (6 points) Fit a support vector classifier to the data with various values of cost, in order to predict whether
 #a car gets high or low gas mileage. Report the cross-validation errors associated with different values of this parameter. 
