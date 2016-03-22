@@ -12,4 +12,4 @@ echo $PBS_O_WORKDIR
 module add R/3.2.2
 
 # Run R script 
-time Rscript parScript.R
+time Rscript Lab_09.R
